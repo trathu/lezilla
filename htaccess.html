@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.lezilla.com [NC]
+RewriteRule ^(.*)$ http://lezilla.com/$1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .? http://www.lezilla.com/ [R=301,L]
